@@ -12,4 +12,4 @@ for i in range(num_char):
     password += random.choice(chars)
 
 print(password)
-print("Your password is written")
+print("Your password is done!")
