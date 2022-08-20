@@ -3,9 +3,16 @@ import random
 print("PasswordGenerator by Htc")
 
 chars = '1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM!£$%&^*@?'
-num_char = len(input("how long should be your password?"))
-new_num_char = int(num_char)
-print("Your password has" + new_num_char + "characters.")
+
+while True:
+    try:
+        num_char = int(input("how long should be your password?"))
+    except ValueError:
+        print("please enter a number")
+    else:
+        break
+    
+print("Your password has %d characters." % num_char)
 
 password = ''
 for i in range(num_char):
